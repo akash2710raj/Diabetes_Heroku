@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Diabetes Predictor</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="heading">Welcome</h1>
+			<h4 class="heading">Predict your diabetes with 96.30% of accuracy, Enter your details and hit the predict button below.</h4>
+		</div>
+		<div class="middle1">
+		 <!-- Result -->
+			<div class="results">
+				{% if prediction==1 %}
+					<h1>Prediction: <span class='danger'>You have DIABETES, Consult to your Doctor.</span></h1>
+				{% elif prediction==0 %}
+					<h1>Prediction: <span class='safe'>You DON'T have diabetes, Good Luck.</span></h1>
+				{% endif %}
+			</div>
+		</div>
+		<div class="footer">
+			<h5 class="footercontent">Copyright Akash Raj</h5>
+		</div>
+	</body>
+</html>

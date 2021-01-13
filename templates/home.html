@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+	<title>Diabities Predictor</title>
+
+</head>
+<body>
+	<div class="header">
+		<h1 class="heading">Welcome</h1>
+		<h4 class="heading">Predict your diabetes with 96.30% of accuracy, Enter your details and hit the predict button below.</h4>
+	</div>
+	<div class="middle">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <input class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
+            <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
+            <input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+            <input class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20"><br>
+            <input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80"><br>
+            <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+            <input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+            <input class="form-input" type="text" name="age" placeholder="Enter Your Age"><br>
+            <input type="submit" class="btn" value="Predict">
+        </form>
+    </div>
+    <div class="footer">
+        <h5 class="footercontent">Copyright Akash Raj</h5>
+    </div>
+</body>
+</html>
